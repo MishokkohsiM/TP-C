@@ -336,13 +336,11 @@ int CheckEmpry (char * str){
 }
 
 int main(){
-    // Колличество строк
     size_t len_size = 100;
     char** s =(char**)malloc(sizeof(char*)*len_size);
     if (!s)
         return 0;
     size_t str_len_size = 0;
-    // Колличество строк
     size_t string_size = 128;
     s[str_len_size] = (char*)malloc(sizeof (char)*string_size);
     if (!s[str_len_size])
