@@ -81,7 +81,7 @@ char** div_format (char** s){
                         if (size_result == len_size){
                             char** tmp = (char**)realloc(result,len_size*2);
                             if (!tmp){
-                                for (size_t k = 0; k < len_str; k++){
+                                for (size_t k = 0; k < len_size; k++){
                                     free (result[k]);
                                 }
                                 free(result);
@@ -97,7 +97,7 @@ char** div_format (char** s){
                         len_str = 0;
                         result[size_result] = (char*)malloc(sizeof(char)*size_len);
                         if (!result[size_result]){
-                            for (size_t k = 0; k < len_str; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -113,13 +113,13 @@ char** div_format (char** s){
                         if (size_result == len_size){
                             char** tmp = (char**)realloc(result,len_size*2);
                             if (!tmp){
-                                for (size_t k = 0; k < len_str; k++){
+                                for (size_t k = 0; k < len_size; k++){
                                     free (result[k]);
                                 }
                                 free(result);
                                 return result;
                             }
-                            for (size_t k = 0; k < len_size; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -128,7 +128,7 @@ char** div_format (char** s){
                         }
                         result[size_result] = (char*)malloc(sizeof(char)*size_len);
                         if (!result[size_result]){
-                            for (size_t k = 0; k < len_str; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -150,7 +150,7 @@ char** div_format (char** s){
                         if (size_result == len_size){
                             char** tmp = (char**)realloc(result,len_size*2);
                             if (!tmp){
-                                for (size_t k = 0; k < len_str; k++){
+                                for (size_t k = 0; k < len_size; k++){
                                     free (result[k]);
                                 }
                                 free(result);
@@ -165,7 +165,7 @@ char** div_format (char** s){
                         }
                         result[size_result] =(char*)malloc(sizeof(char)*size_len);
                         if (!result[size_result]){
-                            for (size_t k = 0; k < len_str; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -185,7 +185,7 @@ char** div_format (char** s){
                     count--;
                     if (flag == 1){
                         if (count < 0){
-                            for (size_t k = 0; k < len_str; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -196,13 +196,13 @@ char** div_format (char** s){
                         if (size_result == len_size){
                             char** tmp =(char**)realloc(result,len_size*2);
                             if (!tmp){
-                                for (size_t k = 0; k < len_str; k++){
+                                for (size_t k = 0; k < len_size; k++){
                                     free (result[k]);
                                 }
                                 free(result);
                                 return result;
                             }
-                            for (size_t k = 0; k < len_size; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -212,7 +212,7 @@ char** div_format (char** s){
                         len_str = 0;
                         result[size_result] =(char*)malloc(sizeof(char)*size_len);
                         if (!result[size_result]){
-                            for (size_t k = 0; k < len_str; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -228,7 +228,7 @@ char** div_format (char** s){
                         if (size_result == len_size){
                             char** tmp = (char**)realloc(result,len_size*2);
                             if (!tmp){
-                                for (size_t k = 0; k < len_str; k++){
+                                for (size_t k = 0; k < len_size; k++){
                                     free (result[k]);
                                 }
                                 free(result);
@@ -243,7 +243,7 @@ char** div_format (char** s){
                         }
                         result[size_result] = (char*)malloc(sizeof (char)*size_len);
                         if (!result[size_result]){
-                            for (size_t k = 0; k < len_str; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -265,7 +265,7 @@ char** div_format (char** s){
                         if (size_result == len_size){
                             char** tmp = (char**)realloc(result,len_size*2);
                             if (!tmp){
-                                for (size_t k = 0; k < len_str; k++){
+                                for (size_t k = 0; k < len_size; k++){
                                     free (result[k]);
                                 }
                                 free(result);
@@ -280,7 +280,7 @@ char** div_format (char** s){
                         }
                         result[size_result] = (char*)malloc(sizeof (char)*size_len);
                         if (!result[size_result]){
-                            for (size_t k = 0; k < len_str; k++){
+                            for (size_t k = 0; k < size_result; k++){
                                 free (result[k]);
                             }
                             free(result);
@@ -316,7 +316,7 @@ char** div_format (char** s){
         return result;
     }
     else{
-        for (size_t k = 0; k < len_str; k++){
+        for (size_t k = 0; k < size_result; k++){
             free (result[k]);
         }
         free(result);
