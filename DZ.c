@@ -370,8 +370,12 @@ int main(){
             s = tmp;
         }
         s[str_len_size] = (char*)malloc(sizeof (char)*string_size);
-        if (!s[str_len_size])
+        if (!s[str_len_size]){
+            for (size_t k = 0; k < str_len_size - 1; k++)
+                free(s[k]);
+            free(s);
             return 0;
+        }
         getline_result = getline(&s[str_len_size],& string_size,stdin);
     }
     char** result = div_format(s);
