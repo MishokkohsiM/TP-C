@@ -398,7 +398,7 @@ int main(){
         }
         free (result);
     }
-    for (size_t i = 0; i < str_len_size; i++){
+    for (size_t i = 0; i <= str_len_size; i++){
         free (s[i]);
     }
     free(s);
